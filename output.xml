@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2025-07-18T15:17:09.167427" rpa="false" schemaversion="5">
+<suite id="s1" name="Bdd" source="C:\Users\gabri\OneDrive\Desktop\CODING\RobotFmW\Robot_aula03\bdd.robot">
+<test id="s1-t1" name="Case 1: Execute YT video on it's website" line="42">
+<kw name="Access website">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:09.519549" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<arg>https://www.youtube.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-18T15:17:09.518548" elapsed="3.549018"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:09.516548" elapsed="3.552017"/>
+</kw>
+<kw name="Click Accept All">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:13.105563" level="INFO">Clicking element '//button[@aria-label="Accept the use of cookies and other data for the purposes described"]'.</msg>
+<arg>${Button_Accept}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T15:17:13.104563" elapsed="9.628815"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:13.103566" elapsed="9.629812"/>
+</kw>
+<kw name="Type song name">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_Search}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-18T15:17:22.736903" elapsed="0.070822"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-18T15:17:23.809204" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-18T15:17:22.807725" elapsed="1.001479"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:23.810220" level="INFO">Typing text 'Carmen Fantasy Mate Bekavac' into text field '//input[@name="search_query"]'.</msg>
+<arg>${Input_Search}</arg>
+<arg>${Song Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T15:17:23.810220" elapsed="2.495757"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:22.734888" elapsed="3.571089"/>
+</kw>
+<kw name="Click Search Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:26.308485" level="INFO">Clicking element '//button[@aria-label="Search"]'.</msg>
+<arg>${Button_Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T15:17:26.306973" elapsed="0.221347"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:26.306973" elapsed="0.221347"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-18T15:17:26.530844" level="INFO">(//ytd-video-renderer//a[@id="thumbnail" and contains(@href, "/watch")])[1]</msg>
+<arg>${First_Video}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-18T15:17:26.529829" elapsed="0.001015"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:26.760646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-07-18T15:17:26.532856" elapsed="0.227790"/>
+</kw>
+<kw name="Click First_Video">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${First_Video}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-18T15:17:26.762661" elapsed="2.086650"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:28.851335" level="INFO">Clicking element '(//ytd-video-renderer//a[@id="thumbnail" and contains(@href, "/watch")])[1]'.</msg>
+<arg>${First_Video}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T15:17:28.850326" elapsed="3.171663"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:26.761660" elapsed="5.261335"/>
+</kw>
+<kw name="Verify Video is playing">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Proof}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-18T15:17:32.025989" elapsed="3.160614"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:17:35.599489" level="INFO">Element '//div[@id="owner"]' is displayed.</msg>
+<arg>${Proof}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-18T15:17:35.186603" elapsed="0.412886"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-18T15:17:50.600758" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-18T15:17:35.600502" elapsed="15.000256"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:32.024987" elapsed="18.575771"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-18T15:17:50.600758" elapsed="2.311367"/>
+</kw>
+<status status="PASS" start="2025-07-18T15:17:09.514549" elapsed="43.398569"/>
+</test>
+<status status="PASS" start="2025-07-18T15:17:09.169446" elapsed="43.746681"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
