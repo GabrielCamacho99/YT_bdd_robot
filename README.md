@@ -17,6 +17,7 @@ At first it had many bugs to correct , specially in the elements xpaths:
 The test passed completely after this change as you can check on the report.html.
 
 -----------//--------------------//-------------
+
 This was my first real website automation test as I started studying RobotFramework and it was truly important for me to understand the basic principles of using the correct xpaths to the given elements, about how the loading of each page can condition the functioning of the test , learned to use "wait until..." instead of "sleep" and it was an exercise of resilience in the face of bugs and failures.
 
 
