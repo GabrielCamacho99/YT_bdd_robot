@@ -10,7 +10,9 @@ At first it had many bugs to correct , specially in the elements xpaths:
 
       So i gave it a day and came back at it , deleted all the js scripts, changed the element and xpath for the video , used "wait until element is visible" instead of "sleep" and this bug was solved. The video was always found and clicked
 
-  - 2nd then another bug happened on the verification, when it asked for "element should be visible ${proof} " it didn't find the element ; after some more rigorous scrapping I found an element with an id instead of an YT class.
+  - 2nd then another bug happened on the verification, when it asked for "element should be visible ${proof} "
+    it didn't find the element ; after some more rigorous scrapping I found an element with an id instead of an YT class.
+    
     I used that id for the ${proof} locator , but at first test it failed again saying that the element was not visible - and when i checked the print and report the page didn't get the chance to fully load before the verification.
     So I added a "wait until element is visible" before the "element should be visible"
 
